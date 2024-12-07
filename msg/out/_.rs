@@ -5295,18 +5295,18 @@ pub struct Nlbphdcpcpf {
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Vector {
     #[prost(sint32, tag = "1")]
-    pub iiiodofedhc: i32,
+    pub x: i32,
     #[prost(sint32, tag = "9")]
-    pub anhkkmbjgfe: i32,
+    pub y: i32,
     #[prost(sint32, tag = "4")]
-    pub ddpbecjepei: i32,
+    pub z: i32,
 }
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct MotionInfo {
     #[prost(message, optional, tag = "10")]
     pub pos: ::core::option::Option<Vector>,
     #[prost(message, optional, tag = "7")]
-    pub fpinlanjlcj: ::core::option::Option<Vector>,
+    pub rot: ::core::option::Option<Vector>,
 }
 #[derive(Clone, Copy, PartialEq, ::prost::Message)]
 pub struct Vector4 {
@@ -18470,7 +18470,7 @@ pub struct ScenePropInfo {
     #[prost(uint32, tag = "15")]
     pub prop_state: u32,
     #[prost(uint32, tag = "1")]
-    pub quest_prop_id: u32,
+    pub prop_id: u32,
     #[prost(uint32, tag = "9")]
     pub life_time_ms: u32,
     #[prost(uint64, tag = "13")]

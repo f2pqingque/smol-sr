@@ -5500,14 +5500,14 @@ message NLBPHDCPCPF {
 }
 
 message Vector {
-	sint32 IIIODOFEDHC = 1;
-	sint32 ANHKKMBJGFE = 9;
-	sint32 DDPBECJEPEI = 4;
+	sint32 x = 1;
+	sint32 y = 9;
+	sint32 z = 4;
 }
 
 message MotionInfo {
 	Vector pos = 10;
-	Vector FPINLANJLCJ = 7;
+	Vector rot = 7;
 }
 
 message Vector4 {
@@ -16476,7 +16476,7 @@ message PropExtraInfo {
 
 message ScenePropInfo {
 	uint32 prop_state = 15;
-	uint32 quest_prop_id = 1;
+	uint32 prop_id = 1;
 	uint32 life_time_ms = 9;
 	uint64 create_time_ms = 13;
 	repeated string trigger_name_list = 12;

@@ -72,6 +72,7 @@ fn main() {
             retcode: 0,
             ip: String::from("127.0.0.1"),
             port: 7000,
+            // epic bruteforce
             use_tcp: true,
             watermark_enable: true,
             enable_video_bundle_version_update: true,
@@ -85,12 +86,12 @@ fn main() {
             enable_upload_battle_log: true,
             ejcaokobhbg: true,
             nhehajgmjnj: true,
-            ios_exam: false,
+            ios_exam: true,
             mtp_switch: true,
             ..Default::default()
         }
         .encode_to_vec(),
-    );
+    );    
 
     let constants = format!(
         "const MDK_SHIELD: &str = r#\"{}\"#;\n\

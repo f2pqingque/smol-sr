@@ -9,7 +9,7 @@ sdkserver is abusing `build.rs`, can probably go lower if using `hyper` instead 
 
 ## binary sizes
 - sdkserver: 305 KB (312,320 bytes)
-- gameserver: todo
+- gameserver: 276 KB (283,136 bytes) .. NOTE: still getting 1001_3 rn.
 
 ## tutorial:
 ```

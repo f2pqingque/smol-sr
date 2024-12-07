@@ -1,5 +1,5 @@
 // Convert le bytes into hsr packet
-pub async fn decode_packet(bytes: &[u8]) -> Result<(u16, Vec<u8>), &str> {
+pub fn decode_packet(bytes: &[u8]) -> Result<(u16, Vec<u8>), &str> {
     use std::convert::TryInto;
 
     if bytes.len() < 16 {
@@ -50,7 +50,7 @@ pub async fn decode_packet(bytes: &[u8]) -> Result<(u16, Vec<u8>), &str> {
 }
 
 // Convert le cmd & proto into packet
-pub async fn encode_packet(cmd_id: u16, data: Vec<u8>) -> Vec<u8> {
+pub fn encode_packet(cmd_id: u16, data: Vec<u8>) -> Vec<u8> {
     // The total length of the packet consists of a fixed header, body, and tail.
     let packet_len = 12 + data.len() + 4;
 

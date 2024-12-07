@@ -1,7 +1,7 @@
 use msg::{Avatar, GetAvatarDataScRsp};
 use prost::Message;
 
-pub async fn on_get_avatar_data(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_get_avatar_data(_req: Vec<u8>) -> Vec<u8> {
     GetAvatarDataScRsp {
         is_get_all: true,
         avatar_list: vec![Avatar {

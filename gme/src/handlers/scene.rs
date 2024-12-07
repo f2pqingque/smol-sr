@@ -5,7 +5,7 @@ use msg::{
 };
 use prost::Message;
 
-pub async fn on_get_cur_scene_info(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_get_cur_scene_info(_req: Vec<u8>) -> Vec<u8> {
     GetCurSceneInfoScRsp {
         retcode: 0,
         scene: Some(SceneInfo {

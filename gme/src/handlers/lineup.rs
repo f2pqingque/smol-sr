@@ -3,7 +3,7 @@ use msg::{
 };
 use prost::Message;
 
-pub async fn on_get_cur_lineup(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_get_cur_lineup(_req: Vec<u8>) -> Vec<u8> {
     GetCurLineupDataScRsp {
         retcode: 0,
         lineup: Some(LineupInfo {
@@ -26,7 +26,7 @@ pub async fn on_get_cur_lineup(_req: Vec<u8>) -> Vec<u8> {
     .encode_to_vec()
 }
 
-pub async fn on_get_all_lineup_data(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_get_all_lineup_data(_req: Vec<u8>) -> Vec<u8> {
     GetAllLineupDataScRsp {
         lineup_list: vec![LineupInfo {
             name: String::from("smolteam"),

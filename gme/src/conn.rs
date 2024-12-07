@@ -4,19 +4,19 @@ use msg::*;
 
 macro_rules! dummy_handle {
     ($rsp_cmd:expr) => {
-        pk::encode_packet($rsp_cmd, Vec::with_capacity(0)).await
+        pk::encode_packet($rsp_cmd, Vec::with_capacity(0))
     };
 }
 
 macro_rules! handle_packet {
     ($body:expr, $rsp_cmd:expr, $handler:path) => {
-        pk::encode_packet($rsp_cmd, $handler($body).await).await
+        pk::encode_packet($rsp_cmd, $handler($body))
     };
 }
 
 use handlers::{avatar, lineup, login, mission, player, scene};
 
-pub async fn ping_pong(cmd: u16, body: Vec<u8>) -> Vec<u8> {
+pub fn ping_pong(cmd: u16, body: Vec<u8>) -> Vec<u8> {
     match cmd {
         PLAYER_GET_TOKEN_CS_REQ => {
             handle_packet!(body, PLAYER_GET_TOKEN_SC_RSP, login::on_player_get_token)

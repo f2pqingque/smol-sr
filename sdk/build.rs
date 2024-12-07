@@ -87,7 +87,7 @@ fn main() {
             ejcaokobhbg: true,
             nhehajgmjnj: true,
             ios_exam: true,
-            mtp_switch: true,
+            mtp_switch: false,
             ..Default::default()
         }
         .encode_to_vec(),

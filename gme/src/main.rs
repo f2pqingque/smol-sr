@@ -35,17 +35,10 @@ async fn mephistopheles(mut stream: Async<TcpStream>) -> io::Result<()> {
             let complete_message = &buffer[..pos + 4]; // Include the tail magic
 
             // Attempt to decode the message
-            let (cmd, body) = match pk::decode_packet(complete_message).await {
-                Ok(result) => result,
-                Err(e) => {
-                    eprintln!("L + ratio: {}", e);
-                    buffer.drain(..pos + 4); // Discard the processed portion of the buffer
-                    continue;
-                }
-            };
+            let (cmd, body) = pk::decode_packet(complete_message).unwrap();
 
             // Encode the response packet
-            let rsp = conn::ping_pong(cmd, body).await;
+            let rsp = conn::ping_pong(cmd, body);
 
             if rsp.len() == 0 {
                 println!("unhandled {}\n", cmd);

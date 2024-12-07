@@ -1,7 +1,7 @@
 use msg::{GetMissionStatusCsReq, GetMissionStatusScRsp, Mission, MissionStatus};
 use prost::Message;
 
-pub async fn on_get_mission_status(req: Vec<u8>) -> Vec<u8> {
+pub fn on_get_mission_status(req: Vec<u8>) -> Vec<u8> {
     let req: &[u8] = &req;
     let dec = GetMissionStatusCsReq::decode(req).unwrap();
 

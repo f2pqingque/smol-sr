@@ -2,7 +2,7 @@ use crate::util;
 use msg::{PlayerBasicInfo, PlayerGetTokenScRsp, PlayerLoginFinishScRsp, PlayerLoginScRsp};
 use prost::Message;
 
-pub async fn on_player_get_token(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_player_get_token(_req: Vec<u8>) -> Vec<u8> {
     PlayerGetTokenScRsp {
         msg: String::from("OK"),
         retcode: 0,
@@ -12,7 +12,7 @@ pub async fn on_player_get_token(_req: Vec<u8>) -> Vec<u8> {
     .encode_to_vec()
 }
 
-pub async fn on_player_login(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_player_login(_req: Vec<u8>) -> Vec<u8> {
     PlayerLoginScRsp {
         basic_info: Some(PlayerBasicInfo {
             nickname: String::from("smol"),
@@ -32,6 +32,6 @@ pub async fn on_player_login(_req: Vec<u8>) -> Vec<u8> {
     .encode_to_vec()
 }
 
-pub async fn on_player_login_finish(_req: Vec<u8>) -> Vec<u8> {
+pub fn on_player_login_finish(_req: Vec<u8>) -> Vec<u8> {
     PlayerLoginFinishScRsp { retcode: 0 }.encode_to_vec()
 }

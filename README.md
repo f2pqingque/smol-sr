@@ -9,7 +9,9 @@ sdkserver is abusing `build.rs`, can probably go lower if using `hyper` instead 
 
 ## binary sizes
 - sdkserver: 305 KB (312,320 bytes)
-- gameserver: 276 KB (283,136 bytes) .. NOTE: still getting 1001_3 rn.
+- gameserver: 276 KB (283,136 bytes)
+
+![image](https://github.com/user-attachments/assets/3ed60175-19df-451e-be23-0b82b7860b1a)
 
 ## tutorial:
 ```

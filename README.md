@@ -3,9 +3,9 @@ minimal sr server aimed for minimal file size.
 
 it uses the `smol` runtime instead of the usual go-to `tokio`.
 
-it can still do normal, "not hardcoded", battle from json. (plan)
-
 sdkserver is abusing `build.rs`, can probably go lower if using `hyper` instead too.
+
+for the more "complete" and "proper" PS go to https://github.com/f2pqingque/sr
 
 ## binary sizes
 - sdkserver: 305 KB (312,320 bytes)
